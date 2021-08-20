@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:NavServiceDemo.ViewModels"
+             x:Class="NavServiceDemo.Pages.NormalPage">
+    <ContentPage.BindingContext>
+        <vm:DummyPageViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="This is a normal page"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Pop Page" 
+                    Command="{Binding PopPageCommand}"
+                    CommandParameter="{Binding IsModal}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
